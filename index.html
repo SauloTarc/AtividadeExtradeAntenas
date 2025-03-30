@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Calculadora de Padrões de Radiações</title>
+    </head>
+
+    <body>
+        <div class="html">
+            <div class="header">
+                <h1 class="title">Calculadora de Padrões de Radiações</h1>
+            </div>
+
+            <div class="calculator">
+                <div class="default">
+                    <label for="padrao">Padrão de Radiação (como função de θ e φ):</label><br>
+                    <input type="text" id="padrao" placeholder="Exemplo: Math.sin(theta) * Math.cos(phi)" required><br><br>
+                </div>
+                <button class="button" onclick="calcularDiretividade()">Calcular Diretividade</button>
+            </div>
+
+            <div class="graph">
+                <div class="titlegraph">
+                    <h2>Gráfico do Padrão</h2>
+                </div>
+                <div class="graphic">
+                    <canvas id="grafico" width="400" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
