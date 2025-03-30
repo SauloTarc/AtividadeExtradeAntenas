@@ -1,0 +1,28 @@
+body { 
+    font-family: Arial, sans-serif; 
+    padding: 20px; 
+}
+
+input, button { 
+    padding: 10px; 
+    margin: 5px; 
+}
+
+.container { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.container div { 
+    margin-right: 30px; 
+}
+
+canvas { 
+    margin-top: 20px; 
+}
+
+#resultado { 
+    margin-top: 20px; 
+    font-weight: bold; 
+}

@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="script.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <link rel="stylesheet" href="style.css">
         <title>Calculadora de Padrões de Radiações</title>
     </head>
@@ -18,19 +18,30 @@
             <div class="calculator">
                 <div class="default">
                     <label for="padrao">Padrão de Radiação (como função de θ e φ):</label><br>
-                    <input type="text" id="padrao" placeholder="Exemplo: Math.sin(theta) * Math.cos(phi)" required><br><br>
+                    <input type="text" id="padrao" placeholder="Exemplo: sin(theta) * cos(phi)" required><br><br>
                 </div>
                 <button class="button" onclick="calcularDiretividade()">Calcular Diretividade</button>
             </div>
+            
+            <div>
+                <label>Selecione o tipo de gráfico:</label><br>
+                <input type="radio" name="graficoTipo" value="campo" checked> Gráfico de Campo
+                <input type="radio" name="graficoTipo" value="potencia"> Gráfico de Potência
+                <input type="radio" name="graficoTipo" value="potenciaDb"> Gráfico de Potência em dB
+            </div>
 
-            <div class="graph">
-                <div class="titlegraph">
-                    <h2>Gráfico do Padrão</h2>
-                </div>
-                <div class="graphic">
+            <div class="container">
+                <div id="grafico-container">
                     <canvas id="grafico" width="400" height="400"></canvas>
                 </div>
+        
+                <div id="resultado-container">
+                    <h3>Resultados:</h3>
+                    <p id="resultado"></p>
+                </div>
             </div>
+
+            <script src="script.js"></script>
         </div>
     </body>
 </html>
